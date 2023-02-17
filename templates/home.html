@@ -16,7 +16,7 @@
 	<h1>Predict House Pricel</h1>
 
      <!-- Form to enter new data for predictions  -->
-    <form action=""method="POST">
+    <form action="{{ url_for('predict')}}"method="POST">
       <input type="text" name="bedrooms" placeholder="bedrooms" required="required" /><br>
     	<input type="text" name="bathrooms" placeholder="bathrooms" required="required" /><br>
       <input type="text" name="sqft_living" placeholder="sqft_living" required="required" /><br>
@@ -38,6 +38,6 @@
   
    
  </div>
-
+{{pred}}
 </body>
 </html>
