@@ -5,17 +5,14 @@ import numpy as np
 from config import PORT, DEBUG_MODE
 app = Flask(__name__)
 
-# load the model from disk
-# save the model to disk
-filename = 'finalized_model.sav'
-model=pickle.load(open(filename, 'rb'))
-cols = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 
-       'waterfront', 'view', 'condition', 'grade', 'sqft_above',
-       'sqft_basement', 'yr_renovated',  'lat',
-       'sqft_living15']
+# Load the model from the file
+with open('model.pkl', 'rb') as file:
+    model = pickle.load(file)
 
-# load the model from disk
-pickle.load(open('finalized_model.sav', 'rb'))
+cols = [ 'bedrooms', 'bathrooms', 
+       'waterfront', 'view', 'condition', 'grade', 'sqft_above',
+       'sqft_basement',  'lat', 
+       'sqft_living15']    
 
 @app.route('/')
 def home():
