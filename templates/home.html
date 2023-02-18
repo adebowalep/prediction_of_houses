@@ -13,17 +13,30 @@
 
 <body>
  <div class="login">
-	<h1>Predict House Pricel</h1>
-  
-     <! <form>
+	<h1>Predict House Price</h1> 
+          
+      <form action="{{ url_for('predict')}}"method="POST">
       <div class="form-group">
           <label for="bedrooms">Bedrooms</label>
-          <input type="number" class="form-control" id="bedrooms" name="bedrooms" required,pla>
+          <input type="number" class="form-control" id="bedrooms" name="bedrooms" required>
       </div>
       <div class="form-group">
           <label for="bathrooms">Bathrooms</label>
           <input type="number" class="form-control" id="bathrooms" name="bathrooms" required>
       </div>
+      <div class="form-group">
+          <label for="sqft_living">Square Feet Living</label>
+          <input type="number" class="form-control" id="sqft_living" name="sqft_living" required>
+      </div>
+      <div class="form-group">
+          <label for="sqft_lot">Square Feet Lot</label>
+          <input type="number" class="form-control" id="sqft_lot" name="sqft_lot" required>
+      </div>
+      <div class="form-group">
+          <label for="floors">Floors</label>
+          <input type="number" class="form-control" id="floors" name="floors" required>
+      </div>
+
       <div class="form-group">
           <label for="waterfront">Waterfront</label>
           <select class="form-control" id="waterfront" name="waterfront" required>
@@ -52,7 +65,8 @@
               <option value="5">Excellent</option>
           </select>
       </div>
-      <div class="form-group">
+         
+       <div class="form-group">
           <label for="grade">Grade</label>
           <select class="form-control" id="grade" name="grade" required>
               <option value="1">Low</option>
@@ -66,7 +80,8 @@
               <option value="9">Magnificent</option>
               <option value="10">Palatial</option>
           </select> 
-      </div>     
+      </div>
+
       <div class="form-group">
           <label for="sqft_above">Square Feet Above</label>
           <input type="number" class="form-control" id="sqft_above" name="sqft_above" required> 
@@ -75,6 +90,20 @@
           <label for="sqft_basement">Square Feet Basement</label>
           <input type="number" class="form-control" id="sqft_basement" name="sqft_basement" required>
       </div>
+      <div class="form-group">
+          <label for="yr_built">Year Built</label>
+          <input type="number" class="form-control" id="yr_built" name="yr_built" required>
+      </div>
+      <div class="form-group">
+          <label for="yr_renovated">Year Renovated</label>
+          <input type="number" class="form-control" id="yr_renovated" name="yr_renovated" required>
+      </div>
+
+      <div class="form-group">
+          <label for="zipcode">Zipcode</label>
+          <input type="number" class="form-control" id="zipcode" name="zipcode" required>
+      </div>
+
       <div class="form-group">
           <label for="lat">Latitude</label>
           <input type="number" class="form-control" id="lat" name="lat" required>
@@ -87,11 +116,12 @@
           <label for="sqft_living15">Square Feet Living 15</label>
           <input type="number" class="form-control" id="sqft_living15" name="sqft_living15" required>
       </div>
-           <button type="submit" class="btn btn-primary">Predict</button>
-  </form> -->
-
-
-
+      <div class="form-group">
+          <label for="sqft_lot15">Square Feet Lot 15</label>
+          <input type="number" class="form-control" id="sqft_lot15" name="sqft_lot15" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Predict</button>
+  </form> 
 
    <br>
    <br>
