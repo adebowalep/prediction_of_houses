@@ -1,4 +1,4 @@
-FROM python:3.11
+FROM python:latest
 
 RUN pip install virtualenv
 ENV VIRTUAL_ENV=/venv
